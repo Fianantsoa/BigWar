@@ -1,0 +1,29 @@
+import random
+def position(axe, groupe):
+    if groupe == "vert":
+        i = 0
+        listPos = []
+        while i < 7:
+            if axe == "x":
+                pos = random.randint(0, 10)
+            if axe == "y":
+                pos = random.randint(1, 12)
+            if pos in listPos:
+                continue
+            else:
+                listPos.append(pos*50)
+                i = i + 1
+    if groupe == "bleu":
+        i = 0
+        listPos = []
+        while i < 7:
+            if axe == "x":
+                pos = random.randint(13, 23)
+            if axe == "y":
+                pos = random.randint(1, 12)
+            if pos in listPos:
+                continue
+            else:
+                listPos.append(pos*50)
+                i = i + 1
+    return listPos
